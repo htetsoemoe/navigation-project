@@ -10,7 +10,7 @@ const getDirection = async (req, res) => {
                 message: "Origin and destination are required",
             })
         }
-        const apiKey = process.env.GOOGLE_MAPS_API_KEY;
+        const apiKey = process.env.GOOGLE_MAPS_API_KEY; // this key must be 'Google Maps Routes API Key'
         console.log(`apiKey: ${apiKey}`);
         const url = `https://maps.googleapis.com/maps/api/directions/json?origin=${encodeURIComponent(origin)}&destination=${encodeURIComponent(destination)}&mode=${mode}&key=${apiKey}`;
 
@@ -20,7 +20,7 @@ const getDirection = async (req, res) => {
             return res.status(400).json({
                 success: false,
                 message: response.data.error_message,
-            })   
+            })
         }
 
         res.status(200).json({
@@ -39,5 +39,5 @@ const getDirection = async (req, res) => {
 }
 
 module.exports = {
-    getDirection
+    getDirection,
 }

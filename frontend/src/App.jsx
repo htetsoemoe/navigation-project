@@ -24,9 +24,9 @@ const App = () => {
 
   return (
     <div className="app">
-      <h1>Navigation App</h1>
+      {/* <h1>Navigation App</h1> */}
       <div className="input-container">
-        <input
+        {/* <input
           type="text"
           placeholder="Enter origin"
           value={origin}
@@ -43,7 +43,7 @@ const App = () => {
           <option value="walking">Walking</option>
           <option value="bicycling">Bicycling</option>
           <option value="transit">Transit</option>
-        </select>
+        </select> */}
         {/* <button onClick={fetchDirections}>Get Directions</button> IMPORTANT: */}
       </div>
       <DirectionMap directions={directions} /> {/** This line is temporary */}
